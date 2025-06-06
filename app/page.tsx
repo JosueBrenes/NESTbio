@@ -23,26 +23,32 @@ export default function Component() {
     {
       name: "Fabian Rivera",
       phone: "+50685351653",
+      linkedin: "#",
     },
     {
       name: "Nicole Rodriguez",
       phone: "+50664048935",
+      linkedin: "#",
     },
     {
       name: "Avril Porras",
       phone: "+50686798681",
+      linkedin: "#",
     },
     {
       name: "Valeska Aparicio",
       phone: "+50663467521",
+      linkedin: "#",
     },
     {
       name: "Yalitza Castillo",
       phone: "+50687261249",
+      linkedin: "#",
     },
     {
       name: "Josué Brenes",
       phone: "+50685833467",
+      linkedin: "https://www.linkedin.com/in/josue-brenes/",
     },
   ];
 
@@ -53,7 +59,7 @@ export default function Component() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
             <Image
-              src="/images/logo.png"
+              src="/placeholder.svg?height=32&width=32&text=NESTbio"
               alt="NESTbio Logo"
               width={32}
               height={32}
@@ -152,7 +158,7 @@ export default function Component() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/marte-hero.png"
+            src="/placeholder.svg?height=1080&width=1920&text=Superficie+de+Marte"
             alt="Superficie de Marte"
             fill
             className="object-cover object-center"
@@ -401,7 +407,7 @@ export default function Component() {
                   </a>
 
                   <a
-                    href="#"
+                    href={member.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-blue-600/20 hover:bg-blue-600/40 rounded-full flex items-center justify-center transition-colors group"
