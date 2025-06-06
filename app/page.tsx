@@ -151,15 +151,20 @@ export default function Component() {
               size="lg"
               className="w-full sm:w-auto bg-mars-600 hover:bg-mars-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg"
             >
-              <Play className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-              VER MISIÓN
+              <Link href="#mision" className="flex items-center">
+                <Play className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+                VER MISIÓN
+              </Link>
             </Button>
+
             <Button
               size="lg"
               variant="outline"
               className="w-full sm:w-auto border-white text-black hover:bg-white hover:text-black px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg"
             >
-              EXPLORAR TECNOLOGÍA
+              <Link href="#desafios" className="flex items-center">
+                EXPLORAR TECNOLOGÍA
+              </Link>
             </Button>
           </div>
         </div>
