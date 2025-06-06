@@ -376,22 +376,6 @@ export default function Component() {
               Marte.
             </p>
           </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto">
-            <Button
-              size="lg"
-              className="bg-mars-600 hover:bg-mars-700 px-6 sm:px-8 w-full sm:w-auto"
-            >
-              APLICAR COMO INVESTIGADOR
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-mars-500 text-mars-400 hover:bg-mars-500 hover:text-white px-6 sm:px-8 w-full sm:w-auto"
-            >
-              DESCARGAR WHITEPAPER
-            </Button>
-          </div>
         </div>
       </section>
 
