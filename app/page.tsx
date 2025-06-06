@@ -79,31 +79,31 @@ export default function Component() {
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <div className="lg:hidden bg-black/95 backdrop-blur-md border-t border-mars-500/20">
-            <nav className="container mx-auto px-4 py-4 space-y-4">
+            <nav className="container mx-auto px-4 py-6 space-y-4">
               <Link
                 href="#mision"
-                className="block text-sm font-medium hover:text-mars-400 transition-colors py-2"
+                className="block text-sm font-medium hover:text-mars-400 transition-colors py-3"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 MISIÓN
               </Link>
               <Link
                 href="#desafios"
-                className="block text-sm font-medium hover:text-mars-400 transition-colors py-2"
+                className="block text-sm font-medium hover:text-mars-400 transition-colors py-3"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 TECNOLOGÍA
               </Link>
               <Link
                 href="#equipo"
-                className="block text-sm font-medium hover:text-mars-400 transition-colors py-2"
+                className="block text-sm font-medium hover:text-mars-400 transition-colors py-3"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 EQUIPO
               </Link>
               <Link
                 href="#contacto"
-                className="block text-sm font-medium hover:text-mars-400 transition-colors py-2"
+                className="block text-sm font-medium hover:text-mars-400 transition-colors py-3"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 CONTACTO
@@ -129,19 +129,19 @@ export default function Component() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/80" />
         </div>
 
-        <div className="relative z-10 text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <h1 className="text-3xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 tracking-tight leading-tight">
+        <div className="relative z-10 text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-24 lg:py-32">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 sm:mb-6 tracking-tight leading-tight">
             NESTbio
             <span className="block text-mars-500 mt-2">
               REVOLUCIÓN ENERGÉTICA
             </span>
           </h1>
 
-          <p className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 text-gray-300 max-w-4xl mx-auto leading-relaxed px-4">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 text-gray-300 max-w-4xl mx-auto leading-relaxed px-4">
             Transformando algas chlorella en energía sostenible para Marte y la
             Tierra. La biotecnología que cambiará el futuro de la humanidad.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
             <Button
               size="lg"
               className="w-full sm:w-auto bg-mars-600 hover:bg-mars-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg"
@@ -167,16 +167,16 @@ export default function Component() {
       {/* Mission Section */}
       <section
         id="mision"
-        className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-black to-mars-950/20"
+        className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-black to-mars-950/20"
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
                 LA BIOTECNOLOGÍA
                 <span className="block text-mars-400 mt-2">MÁS INNOVADORA</span>
               </h2>
-              <p className="text-base sm:text-lg text-gray-300 mb-6 leading-relaxed">
+              <p className="text-sm sm:text-base lg:text-lg text-gray-300 mb-6 leading-relaxed">
                 Nuestra misión es crear productos innovadores que ayuden a la
                 raza humana en la exploración espacial de manera eficiente y
                 autónoma. NESTbio desarrolla sistemas de compostaje de algas
@@ -184,7 +184,7 @@ export default function Component() {
                 marcianos locales para crear biofactorías autónomas que producen
                 oxígeno, biocombustibles y biomasa.
               </p>
-              <div className="grid grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 lg:gap-6 mb-6 sm:mb-8">
                 <div className="text-center p-4 bg-black/30 rounded-lg">
                   <div className="text-2xl sm:text-3xl font-bold text-mars-400">
                     95%
@@ -205,9 +205,9 @@ export default function Component() {
             </div>
             <div className="relative order-1 lg:order-2">
               <div className="relative order-1 lg:order-2">
-                <div className="relative rounded-lg overflow-hidden shadow-2xl bg-black/50">
+                <div className="relative rounded-lg overflow-hidden shadow-2xl bg-black/50 aspect-video">
                   <video
-                    className="w-full h-auto"
+                    className="w-full h-full object-cover"
                     autoPlay
                     muted
                     loop
@@ -216,7 +216,6 @@ export default function Component() {
                     preload="metadata"
                     onError={(e) => {
                       console.error("Error loading video:", e);
-                      // Fallback to image if video fails
                       e.currentTarget.style.display = "none";
                       const img = e.currentTarget.nextElementSibling;
                       if (img && img instanceof HTMLElement)
@@ -230,13 +229,11 @@ export default function Component() {
                     />
                     Tu navegador no soporta el elemento de video.
                   </video>
-                  {/* Fallback image */}
                   <Image
-                    src="/placeholder.svg?height=600&width=800&text=Video+de+Mision+Marte"
+                    src="/placeholder.svg?height=400&width=600&text=Video+de+Mision+Marte"
                     alt="Video de la Misión a Marte"
-                    width={800}
-                    height={600}
-                    className="rounded-lg w-full h-auto hidden"
+                    fill
+                    className="object-cover hidden"
                     style={{ display: "none" }}
                   />
                 </div>
@@ -250,7 +247,7 @@ export default function Component() {
       <section id="desafios" className="py-12 sm:py-16 lg:py-20 bg-mars-950/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
               DESAFÍOS DE LA
               <span className="block text-mars-400 mt-2">
                 BIOTECNOLOGÍA ESPACIAL
@@ -303,10 +300,10 @@ export default function Component() {
             ].map((challenge, index) => (
               <div
                 key={index}
-                className="bg-black/50 p-6 sm:p-8 rounded-lg border border-mars-900/30 hover:border-mars-500/50 transition-all duration-300 hover:transform hover:scale-105"
+                className="bg-black/50 p-4 sm:p-6 lg:p-8 rounded-lg border border-mars-900/30 hover:border-mars-500/50 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <challenge.icon className="h-10 w-10 sm:h-12 sm:w-12 text-mars-400 mb-4" />
-                <h3 className="text-lg sm:text-xl font-bold mb-3">
+                <h3 className="text-base sm:text-lg lg:text-xl font-bold mb-3">
                   {challenge.title}
                 </h3>
                 <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
@@ -329,10 +326,10 @@ export default function Component() {
               { value: "100%", label: "AUTONOMÍA ENERGÉTICA" },
             ].map((stat, index) => (
               <div key={index} className="p-4">
-                <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-mars-400 mb-2">
+                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-mars-400 mb-2">
                   {stat.value}
                 </div>
-                <div className="text-gray-300 text-xs sm:text-sm font-medium">
+                <div className="text-gray-300 text-xs sm:text-sm md:text-base font-medium">
                   {stat.label}
                 </div>
               </div>
@@ -344,13 +341,13 @@ export default function Component() {
       {/* CTA Section */}
       <section className="py-12 sm:py-16 lg:py-20 bg-black">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
             ÚNETE A LA
             <span className="block text-mars-400 mt-2">
               REVOLUCIÓN BIOTECNOLÓGICA
             </span>
           </h2>
-          <p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base lg:text-lg text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed">
             Sé parte de la innovación que transformará la exploración espacial.
             Nuestra misión es desarrollar productos biotecnológicos que permitan
             a la humanidad explorar el espacio de manera eficiente y autónoma.
@@ -358,7 +355,7 @@ export default function Component() {
             oportunidades de colaboración.
           </p>
 
-          <div className="max-w-md mx-auto mb-6 sm:mb-8">
+          <div className="max-w-sm sm:max-w-md mx-auto mb-6 sm:mb-8">
             <form className="flex flex-col sm:flex-row gap-3 sm:gap-2">
               <Input
                 type="email"
@@ -394,7 +391,7 @@ export default function Component() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-black border-t border-mars-900/30 py-8 sm:py-12">
+      <footer className="bg-black border-t border-mars-900/30 py-6 sm:py-8 lg:py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="sm:col-span-2 lg:col-span-1">
