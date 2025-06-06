@@ -25,7 +25,12 @@ export default function Component() {
       <header className="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-mars-500/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
-            <Rocket className="h-6 w-6 sm:h-8 sm:w-8 text-mars-500" />
+            <Image
+              src="/images/logo.png"
+              alt="NESTbio Logo"
+              width={32}
+              height={32}
+            />
             <span className="text-lg sm:text-xl font-bold">NESTbio</span>
           </Link>
 
